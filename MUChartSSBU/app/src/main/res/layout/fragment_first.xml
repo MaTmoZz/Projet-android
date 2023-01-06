@@ -4,49 +4,188 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:addStatesFromChildren="false"
+    android:background="#FFFFFF"
     tools:context=".FirstFragment">
-
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_first"
-        android:layout_width="98dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="56dp"
-        android:text="@string/fox"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
-
-    <Button
-        android:id="@+id/button_first2"
-        android:layout_width="100dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="56dp"
-        android:text="@string/Kazuya"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
 
     <ImageButton
         android:id="@+id/foxButton"
         android:layout_width="136dp"
         android:layout_height="136dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/picture_of_fox"
         android:scaleType="fitXY"
         android:src="@mipmap/fox"
-        app:layout_constraintEnd_toEndOf="@+id/button_first"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="@+id/button_first"
-        app:layout_constraintTop_toBottomOf="@+id/button_first" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/kazuyaButton"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/picture_of_kazuya"
+        android:scaleType="fitXY"
+        android:src="@mipmap/kazuya_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/metaknightButton"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="280dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="fitXY"
+        android:src="@mipmap/metaknight"
+        android:contentDescription="@string/picture_of_metaknight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bylethButton"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="280dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/picture_of_byleth"
+        android:scaleType="fitXY"
+        android:src="@mipmap/byleth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/marthButton"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="492dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/picture_of_marth"
+        android:scaleType="fitXY"
+        android:src="@mipmap/marth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/diddyButton"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="492dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/picture_of_diddy"
+        android:scaleType="fitXY"
+        android:src="@mipmap/diddy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="96dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="40dp"
+        android:capitalize="sentences"
+        android:fontFamily="@font/archivo_black"
+        android:text="KAZUYA"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="50dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="40dp"
+        android:capitalize="sentences"
+        android:fontFamily="@font/archivo_black"
+        android:text="FOX"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="169dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="252dp"
+        android:capitalize="sentences"
+        android:fontFamily="@font/archivo_black"
+        android:text="META KNIGHT"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="169dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="252dp"
+        android:capitalize="sentences"
+        android:fontFamily="@font/archivo_black"
+        android:text="BYLETH"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="99dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="464dp"
+        android:capitalize="sentences"
+        android:fontFamily="@font/archivo_black"
+        android:text="MARTH"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="151dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="464dp"
+        android:capitalize="sentences"
+        android:fontFamily="@font/archivo_black"
+        android:text="DIDDY KONG"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
