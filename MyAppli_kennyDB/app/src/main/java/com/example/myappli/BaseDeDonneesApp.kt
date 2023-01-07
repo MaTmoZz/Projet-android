@@ -11,7 +11,7 @@ abstract class BaseDeDonneesApp : RoomDatabase() {
     // Définit l'objet DAO pour la table "personnages"
     abstract fun personnageDao(): PersonnageDao
 
-    private val LISTEPERSO: Array<String> = arrayOf ( "Fox", "DresseurDePokemon","ken")
+    private val LISTEPERSO: Array<String> = arrayOf("Fox", "DresseurDePokemon", "ken")
 
     /**
      * Gets the singleton instance of SampleDatabase.
@@ -21,33 +21,32 @@ abstract class BaseDeDonneesApp : RoomDatabase() {
      */
 
 
-companion object {
+    companion object {
 
-        private lateinit var sInstance : BaseDeDonneesApp ;
-        fun getInstance(context: Context): BaseDeDonneesApp? {
+        private var sInstance: BaseDeDonneesApp? = null
+        fun getInstance(context: Context): BaseDeDonneesApp {
             if (sInstance == null) {
                 sInstance = Room.databaseBuilder(
                     context.applicationContext,
                     BaseDeDonneesApp::class.java,
                     "DataBase_Smash"
-                )
+                ).allowMainThreadQueries()
                     .build()
-                sInstance.populateInitialData()
+                //sInstance.populateInitialData()
             }
-            return sInstance
+            return sInstance!!
         }
     }
 
-    private fun populateInitialData(){
-        if (personnageDao().count() == 0 ){
-            runInTransaction(Runnable {
-                val person = Personnage(0,"")
-                for ( i in LISTEPERSO.indices){
+    fun populateInitialData() {
+        runInTransaction(Runnable {
+            if (personnageDao().count() == 0) {
+                val person = Personnage(0, "")
+                for (i in LISTEPERSO.indices) {
                     person.nom = LISTEPERSO[i]
                     personnageDao().insert(person)
-
                 }
-            })
-        }
+            }
+        })
     }
 }
