@@ -66,7 +66,9 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("Nom_personage","init DB")
 
-        val personnageDao = BaseDeDonneesApp.getInstance(context)?.personnageDao()
+        val db = BaseDeDonneesApp.getInstance(context)
+        db.populateInitialData()
+        val personnageDao = db.personnageDao()
 
         Log.d("Nom_personage","after init DB")
         // Récupère tous les personnages
