@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ListView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -17,6 +18,7 @@ import com.example.muchartssbu.databinding.FragmentSecondBinding
 class SecondFragment : Fragment() {
 
     private var _binding: FragmentSecondBinding? = null
+    private lateinit var vue: View
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -28,7 +30,7 @@ class SecondFragment : Fragment() {
 
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_second, container, false)
+        vue = inflater.inflate(R.layout.fragment_second, container, false)
         _binding = FragmentSecondBinding.inflate(inflater)
 
 
@@ -37,17 +39,17 @@ class SecondFragment : Fragment() {
         val perso2 = "Falco"
 
         val tableau = listOf(perso, perso1, perso2)
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recipes_list_view)
+        val recyclerView = vue.findViewById<RecyclerView>(R.id.recipes_list_view)
         recyclerView.adapter = Adapteur()
         (recyclerView.adapter as Adapteur).submitList(tableau)
-        return view
+        return vue
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
+        vue.findViewById<Button>(R.id.button_second).setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
     }
