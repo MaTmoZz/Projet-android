@@ -14,3 +14,12 @@ Contraintes techniques:
 - Intégration de la liste
 - Contrainte de temps
 - Merge
+
+
+Architecture de la base de données:
+
+![image](https://user-images.githubusercontent.com/95907052/211761510-18e052ba-3ffd-483b-938d-3674cac67516.png)
+
+
+Application:
+![Screenshot_2023-01-11-09-56-06-670_com example muchartssbu](https://user-images.githubusercontent.com/95907052/211762244-82f6fc0a-8081-461e-a91c-a37863f85cc6.jpg)
