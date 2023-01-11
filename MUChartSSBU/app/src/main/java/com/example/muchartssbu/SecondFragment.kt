@@ -25,17 +25,24 @@ class SecondFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_second, container, false)
+        _binding = FragmentSecondBinding.inflate(inflater)
+
 
         val perso = "Fox"
         val perso1 = "Kirby"
         val perso2 = "Falco"
 
-        val tableau = arrayOf(perso, perso1, perso2)
+        val tableau = listOf(perso, perso1, perso2)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recipes_list_view)
+        recyclerView.adapter = Adapteur()
+        (recyclerView.adapter as Adapteur).submitList(tableau)
+        return view
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
