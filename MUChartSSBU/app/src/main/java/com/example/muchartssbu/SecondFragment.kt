@@ -1,11 +1,14 @@
 package com.example.muchartssbu
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.ListView
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
 import com.example.muchartssbu.databinding.FragmentSecondBinding
 
 /**
@@ -24,9 +27,14 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
-        return binding.root
+        val view = inflater.inflate(R.layout.fragment_second, container, false)
 
+        val perso = "Fox"
+        val perso1 = "Kirby"
+        val perso2 = "Falco"
+
+        val tableau = arrayOf(perso, perso1, perso2)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recipes_list_view)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
